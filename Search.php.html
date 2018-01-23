@@ -1,0 +1,117 @@
+
+<!-- saved from url=(0041)http://cs-server.usc.edu:10451/Search.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><style>
+  .TableClass2  {
+    border: 1px solid silver;
+        }
+    .insideAlbumFolder1{
+        style:none;
+          
+      
+        }
+    </style>
+
+</head><body id="bodyID">
+    <form id="form1" method="POST" action="http://cs-server.usc.edu:10451/Search.php"> 
+    <table class="TableClass" id="table1" width="100%" style="border-collapse: collapse;">
+            <colgroup><col width="20%">
+            <col style="width:60%;background-color:#F3F3F3;border: 2px solid silver;border-bottom: 2px solid silver;">
+            <col width="20%">
+                </colgroup><tbody><tr>
+                    <td id="inputRow"></td>
+                    <td>
+                        <h2 style="text-align:center;"><i>   Facebook Search</i></h2>
+                        <hr>
+             
+                        Keyword: <input id="InputKeyword" name="Keyword" value="" type="text" oclick="storeData();" required="" oninvalid="setCustomValidity(&#39;Please fill out this field&#39;)" oninput="setCustomValidity(&#39;&#39;)">  <br>
+                            
+                <script type="text/javascript">
+                    function changeDisplay(){
+                        document.getElementById('placesAdd').display='block';
+                        return false;
+                    }
+                function addTextBoxesonPlaces(val){
+                    
+                        if(val=="Place")
+                        {
+
+                            document.getElementById("placesAdd").style.display="block";
+                        }
+                    else{
+                        document.getElementById("placesAdd").style.display="none";
+                    }
+                        
+                            return false;
+                        }
+
+                </script>
+<p id="typePara"> Type: <select id="InputType" name="InputType" value="" onchange="addTextBoxesonPlaces(this.value);" onkeypress="addTextBoxesonPlaces(this.value);">
+    <!-- onchange="addTextBoxesonPlaces()" onkeypress="addTextBoxesonPlaces()" -->
+        <option value="User"> Users</option>
+        <option value="Page"> Pages</option>
+        <option value="Event"> Events</option>
+        <option value="Place"> Places</option>
+        <option value="Group"> Groups</option>
+    </select>
+ 
+                </p>
+                        <div id="placesAdd" style="display:none;">
+                            Location: <input id="InputLocation" type="text" name="Location">
+                            Distance(in meters):<input id="InputDistance" type="text" name="Distance">
+                        
+                        </div>
+
+                
+                <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button type="submit" value="Submit" name="Submit">Search</button>
+ <script type="text/javascript">
+                    function funcClear1(){
+
+    if(document.getElementById("placesAdd")){
+document.getElementById("placesAdd").style.display="none";
+        
+    }
+       if(document.getElementById("RecordsData")){
+    var x=document.getElementById("RecordsData");
+    x.parentNode.removeChild(x);
+        
+    }
+                        
+    if(document.getElementById("AlbumsData")){
+    var x=document.getElementById("AlbumsData");
+    x.parentNode.removeChild(x);
+        
+    }
+    if(document.getElementById("PostsData")){
+    var x=document.getElementById("PostsData");
+    x.parentNode.removeChild(x);
+        
+    }
+                        
+    if(document.getElementById("AlbumCompleteTable")){
+    var x=document.getElementById("AlbumCompleteTable");
+    x.parentNode.removeChild(x);
+        
+    }                  
+    if(document.getElementById("PostTable")){
+    var x=document.getElementById("PostTable");
+    x.parentNode.removeChild(x);
+        
+    }   
+
+    return false; 
+    
+}
+     
+     
+</script>
+<button type="reset" value="Reset" onclick="funcClear1();">Clear</button>
+                    </td>
+        <td></td>
+        </tr>
+        </tbody></table>   
+    </form>
+
+<!-- php code to process the form -->
+</body></html>
